@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Gym Station - Frontend",
+      "runtimeExecutable": "node",
+      "program": "${workspaceFolder}/frontend/node_modules/vite/bin/vite.js",
+      "cwd": "${workspaceFolder}/frontend",
+      "args": ["--host", "127.0.0.1", "--port", "5173", "--strictPort"],
+      "console": "internalConsole",
+      "skipFiles": ["<node_internals>/**"],
+      "serverReadyAction": {
+        "pattern": "Local:.*(http://127\\.0\\.0\\.1:5173/)",
+        "uriFormat": "%s",
+        "action": "debugWithChrome",
+        "webRoot": "${workspaceFolder}/frontend"
+      }
+    }
+  ]
+}
